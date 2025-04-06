@@ -3,6 +3,7 @@ import { useState } from 'react'
 import './App.css'
 import Blogs from './assets/components/Blogs/Blogs'
 import Navbar from './assets/components/Navbar/Navbar'
+import { FaBookOpenReader } from "react-icons/fa6";
 
 function App() {
 
@@ -37,7 +38,7 @@ function App() {
           <Blogs handleBookMark={handleBookMark} handleMarkAsRead={handleMarkAsRead}></Blogs>
         </div>
         <div className='right-container w-[25%]'>
-          <h3 className='text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl p-4 font-semibold rounded-lg mb-2'>Spend Time On Read: {readingTime} min</h3>
+          <h3 className='text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl p-4 font-semibold rounded-lg mb-2'><FaBookOpenReader size={25}/> Spend Time On Read: {readingTime} min</h3>
           <h3 className='text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl p-4 font-semibold rounded-lg'>Bookmarked Count: {bookMarked.length}</h3>
           <div className='space-y-3'>
             {
